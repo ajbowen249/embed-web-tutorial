@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ExampleAndroidApplication</string>
+    <string name="page_title">Example Android Application</string>
+    <string name="content_marker">Content below this point comes from the shared web UI.</string>
 </resources>
