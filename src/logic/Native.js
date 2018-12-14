@@ -4,6 +4,14 @@ class NativeWeb {
     }
 }
 
-const Native = NativeWeb;
+function getNativeInterfaceInstance() {
+    if (window.NativeAndroid) {
+        return window.NativeAndroid;
+    } else {
+        return new NativeWeb();
+    }
+}
+
+const Native = getNativeInterfaceInstance();
 
 export default Native;

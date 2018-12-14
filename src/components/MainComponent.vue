@@ -13,7 +13,7 @@ import Native from '../logic/Native.js';
 export default {
     data() {
         return {
-            nativeAdaptor: new Native(),
+            nativeAdaptor: Native,
             nativeStringResult: ''
         };
     }
