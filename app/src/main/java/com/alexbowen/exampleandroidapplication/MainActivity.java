@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 public class MainActivity extends AppCompatActivity
 {
     private WebView webView;
+    private NativeAndroid mNative = new NativeAndroid();
 
     @Override
     protected void onCreate( Bundle savedInstanceState )
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity
 
         webView.clearCache( true );
         webView.clearHistory();
+        webView.addJavascriptInterface( mNative, "NativeAndroid" );
         webView.getSettings().setJavaScriptEnabled( true );
         webView.setWebContentsDebuggingEnabled(true);
         webView.getSettings().setJavaScriptCanOpenWindowsAutomatically( true );
